@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { ChevronDown, Download, Mail } from 'lucide-react';
+import rafiPic from '/rafi_pic.png';
+import resumePdf from '/resume.pdf';
 
 const Hero = () => {
   const [currentRole, setCurrentRole] = useState(0);
@@ -25,7 +27,7 @@ const Hero = () => {
 
   const downloadResume = () => {
     const link = document.createElement('a');
-    link.href = './resume.pdf';
+    link.href = resumePdf;
     link.download = 'S.B.M.Rafi_Resume.pdf';
     link.target = '_blank';
     document.body.appendChild(link);
@@ -53,7 +55,7 @@ const Hero = () => {
           >
             <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 p-1">
               <img
-                src="./rafi_pic.png"
+                src={rafiPic}
                 alt="S.B.M. Rafi"
                 className="w-full h-full rounded-full object-cover"
               />
