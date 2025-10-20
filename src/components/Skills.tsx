@@ -147,7 +147,7 @@ const Skills = () => {
             <p className="text-gray-300 text-base leading-relaxed mb-6 max-w-4xl mx-auto">
               With <span className="text-blue-400 font-semibold">hands-on experience</span> in modern development stacks, 
               <span className="text-emerald-400 font-semibold"> cutting-edge AI/ML implementations</span>, and 
-              <span className="text-purple-400 font-semibold"> proven academic excellence</span> (8.92 CGPA), 
+              <span className="text-purple-400 font-semibold"> proven academic excellence</span>, 
               I bring both technical depth and innovative thinking to every project.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
