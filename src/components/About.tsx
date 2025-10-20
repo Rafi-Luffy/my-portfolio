@@ -40,13 +40,16 @@ const About = () => {
           </h2>
           <div className="max-w-4xl mx-auto space-y-6 text-lg text-gray-300 leading-relaxed">
             <p>
-              Currently interning at <span className="text-blue-400 font-medium">NPTEL (IIT Ropar)</span>, where I'm developing core AI engine components for real-time poll generation from meeting transcripts using Whisper and LLMs. I've architected modular monorepo systems with Turborepo and built sophisticated analytics dashboards.
+              Hey! I'm <span className="text-blue-400 font-medium">Shaik Balaji Mahammad Rafi</span> from Sattenapalli—a town famous for its Limestones. Recently completed my internship at <span className="text-blue-400 font-medium">IIT Ropar</span>, where I built AI-powered systems for real-time poll generation using Whisper and LLMs.
             </p>
             <p>
-              As a <span className="text-emerald-400 font-medium">Class Representative</span> and <span className="text-purple-400 font-medium">ACM Draft Head</span>, I've honed my leadership skills while maintaining an impressive <span className="text-yellow-400 font-medium">8.92 CGPA</span>. I\'m also the creator of <span className="text-emerald-400 font-medium">Shortcut Sensei</span> and several other innovative platforms.
+              I was recently selected as a <span className="text-emerald-400 font-medium">Grand Finalist at Google Agentic AI Hackathon 2025</span>—a Guinness World Record event. I specialize in agentic AI, full-stack development, and blockchain innovations, with hands-on experience building impactful solutions.
             </p>
             <p>
-              I specialize in building AI-powered applications with modern tech stacks, combining strong technical skills with business acumen and cross-cultural communication abilities. My fluency in Japanese language and business culture enables me to work effectively in global environments.
+              As <span className="text-emerald-400 font-medium">Class Representative</span>, <span className="text-purple-400 font-medium">ACM Draft Head</span>, and <span className="text-blue-400 font-medium">Foreign Language Club Coordinator</span>, I've led teams while maintaining an <span className="text-yellow-400 font-medium">8.92 CGPA</span>. My fluency in <span className="text-purple-400 font-medium">Japanese language and business culture</span> enables me to work effectively in global teams.
+            </p>
+            <p>
+              I love blending curiosity, code, and <span className="text-emerald-400 font-medium">kaizen</span> to create innovative solutions that make a difference.
             </p>
           </div>
         </motion.div>

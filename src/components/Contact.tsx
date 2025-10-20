@@ -50,9 +50,10 @@ const Contact = () => {
       // Hide success message after 5 seconds
       setTimeout(() => setShowSuccess(false), 5000);
 
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error('EmailJS Error:', error);
-      setErrorMessage(`Failed to send message: ${error?.text || error?.message || 'Unknown error'}`);
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+      setErrorMessage(`Failed to send message: ${errorMessage}`);
       setShowError(true);
       setTimeout(() => setShowError(false), 8000);
     }
@@ -148,25 +149,6 @@ const Contact = () => {
                 </motion.a>
               ))}
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="bg-gradient-to-r from-blue-500/20 to-emerald-500/20 p-6 rounded-2xl border border-blue-500/30"
-            >
-              <h4 className="text-white font-semibold mb-2">Current Status</h4>
-              <p className="text-gray-300">
-                🚀 Currently interning at IIT Ropar working on AI-powered educational tools
-              </p>
-              <p className="text-gray-300 mt-2">
-                💡 Open to full-time opportunities in AI/ML Engineering, Cloud Architecture, and Full-Stack Development
-              </p>
-              <p className="text-gray-300 mt-2">
-                🎓 Maintaining 8.92 CGPA while actively building innovative projects
-              </p>
-            </motion.div>
           </motion.div>
 
           {/* Contact Form */}

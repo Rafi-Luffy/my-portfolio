@@ -6,6 +6,7 @@ import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
+import WhatsNext from './components/WhatsNext';
 import Contact from './components/Contact';
 import ParticleBackground from './components/ParticleBackground';
 import ScrollIndicator from './components/ScrollIndicator';
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 4000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -39,6 +40,7 @@ function App() {
             <Skills />
             <Projects />
             <Experience />
+            <WhatsNext />
             <Contact />
           </main>
         </>

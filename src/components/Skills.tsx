@@ -1,67 +1,39 @@
 import { motion } from 'framer-motion';
+import { Code2, Palette, Brain, Cloud, Database, Settings } from 'lucide-react';
 
 const Skills = () => {
   const skillCategories = [
     {
-      title: 'Languages & Frameworks',
-      skills: [
-        { name: 'JavaScript', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'Python', level: 88 },
-        { name: 'Java', level: 85 },
-        { name: 'React', level: 92 },
-        { name: 'Node.js', level: 88 },
-        { name: 'HTML/CSS', level: 95 }
-      ]
+      title: 'Languages',
+      icon: Code2,
+      skills: ['JavaScript', 'TypeScript', 'Python', 'Java', 'C', 'HTML/CSS']
     },
     {
-      title: 'Tools & Technologies',
-      skills: [
-        { name: 'TailwindCSS', level: 95 },
-        { name: 'Vite', level: 90 },
-        { name: 'MongoDB', level: 85 },
-        { name: 'Firebase', level: 88 },
-        { name: 'Git/GitHub', level: 92 },
-        { name: 'VS Code', level: 95 },
-        { name: 'Linux', level: 82 }
-      ]
+      title: 'Frontend & Mobile',
+      icon: Palette,
+      skills: ['React 19', 'Vite', 'TailwindCSS', 'Flutter', 'Node.js', 'Express.js']
     },
     {
-      title: 'AI/ML & Cloud',
-      skills: [
-        { name: 'OpenAI APIs', level: 88 },
-        { name: 'Machine Learning', level: 85 },
-        { name: 'Data Analysis', level: 85 },
-        { name: 'Google Cloud', level: 82 },
-        { name: 'Prompt Engineering', level: 90 },
-        { name: 'Deep Learning', level: 78 }
-      ]
+      title: 'AI/ML & LLMs',
+      icon: Brain,
+      skills: ['Vertex AI', 'Gemini API', 'OpenAI', 'LangChain', 'Whisper', 'Vertex AI Vision', 'Prompt Engineering']
+    },
+    {
+      title: 'Cloud & Backend',
+      icon: Cloud,
+      skills: ['Google Cloud Platform', 'Firebase', 'GCP Cloud Functions', 'BigQuery', 'Looker Studio', 'Spring Boot']
+    },
+    {
+      title: 'Databases',
+      icon: Database,
+      skills: ['MongoDB', 'Firebase/Firestore', 'MySQL', 'NoSQL']
+    },
+    {
+      title: 'DevOps & Tools',
+      icon: Settings,
+      skills: ['Docker', 'CI/CD', 'Git/GitHub', 'Turborepo', 'API Integration', 'System Design']
     }
   ];
-
-  const SkillBar = ({ skill, index }: { skill: { name: string; level: number }, index: number }) => (
-    <motion.div
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.1 }}
-      viewport={{ once: true }}
-      className="mb-4"
-    >
-      <div className="flex justify-between mb-2">
-        <span className="text-gray-300 font-medium">{skill.name}</span>
-        <span className="text-blue-400 text-sm font-semibold">{skill.level}%</span>
-      </div>
-      <div className="w-full bg-slate-700 rounded-full h-2.5">
-        <motion.div
-          initial={{ width: 0 }}
-          whileInView={{ width: `${skill.level}%` }}
-          transition={{ duration: 1.2, delay: index * 0.1 + 0.3, ease: "easeOut" }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-blue-500 to-emerald-500 h-2.5 rounded-full shadow-lg"
-        />
-      </div>
-    </motion.div>
-  );
 
   return (
     <section id="skills" className="py-20">
@@ -81,26 +53,35 @@ const Skills = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={category.title}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: categoryIndex * 0.2 }}
+              transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
               viewport={{ once: true }}
               className="bg-slate-800/80 backdrop-blur-sm p-8 rounded-2xl border border-slate-700 hover:border-slate-600 transition-all duration-300"
             >
-              <h3 className="text-xl font-semibold mb-6 text-center text-white">
-                {category.title}
-              </h3>
-              <div className="space-y-4">
+              <div className="flex items-center gap-3 mb-6">
+                <category.icon className="w-7 h-7 text-blue-400" />
+                <h3 className="text-xl font-semibold text-white">
+                  {category.title}
+                </h3>
+              </div>
+              <div className="flex flex-wrap gap-2">
                 {category.skills.map((skill, skillIndex) => (
-                  <SkillBar 
-                    key={skill.name} 
-                    skill={skill} 
-                    index={skillIndex} 
-                  />
+                  <motion.span
+                    key={skill}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.4, delay: categoryIndex * 0.1 + skillIndex * 0.05 }}
+                    viewport={{ once: true }}
+                    whileHover={{ scale: 1.1, y: -2 }}
+                    className="bg-gradient-to-r from-blue-500/20 to-emerald-500/20 border border-blue-500/30 text-blue-200 px-4 py-2 rounded-full text-sm font-medium hover:from-blue-500/30 hover:to-emerald-500/30 hover:border-blue-400/50 transition-all duration-300 cursor-default"
+                  >
+                    {skill}
+                  </motion.span>
                 ))}
               </div>
             </motion.div>
@@ -169,23 +150,20 @@ const Skills = () => {
               <span className="text-purple-400 font-semibold"> proven academic excellence</span> (8.92 CGPA), 
               I bring both technical depth and innovative thinking to every project.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4">
                 <div className="text-blue-400 font-semibold text-sm mb-1">Immediate Impact</div>
-                <div className="text-gray-300 text-xs">Ready to contribute from day one with practical experience</div>
+                <div className="text-gray-300 text-xs">Practical experience ready from day one</div>
               </div>
               <div className="bg-emerald-500/10 border border-emerald-500/20 rounded-lg p-4">
                 <div className="text-emerald-400 font-semibold text-sm mb-1">Continuous Learning</div>
-                <div className="text-gray-300 text-xs">Always exploring new technologies and methodologies</div>
+                <div className="text-gray-300 text-xs">Always exploring new tech and methodologies</div>
               </div>
               <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
                 <div className="text-purple-400 font-semibold text-sm mb-1">Global Perspective</div>
-                <div className="text-gray-300 text-xs">Bilingual capabilities with cross-cultural understanding</div>
+                <div className="text-gray-300 text-xs">Bilingual with cross-cultural understanding</div>
               </div>
             </div>
-            <p className="text-gray-400 text-sm italic">
-              "Passionate about leveraging technology to solve real-world challenges and drive innovation in dynamic environments."
-            </p>
           </div>
         </motion.div>
       </div>
