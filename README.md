@@ -44,8 +44,8 @@ Deployed on GitHub Pages using GitHub Actions workflow.
 ## Contact
 
 - Email: s.b.m.rafi01@gmail.com
-- LinkedIn: linkedin.com/in/rafi-s-b-m
-- GitHub: github.com/Rafi-Luffy
+- LinkedIn: [linkedin.com/in/rafi-s-b-m](url)
+- GitHub: [github.com/Rafi-Luffy](url)
 
 ## License
 
