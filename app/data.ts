@@ -1,5 +1,9 @@
-export const RESUME_PATH = '/Resume_Rafi.S.B.M.pdf';
-export const PROFILE_PATH = '/Profile_Rafi.S.B.M.png';
+const isProd = process.env.NODE_ENV === 'production';
+export const BASE_PATH = isProd ? '/my-portfolio' : '';
+export const getAsset = (path: string) => `${BASE_PATH}${path.startsWith('/') ? path : '/' + path}`;
+
+export const RESUME_PATH = getAsset('/Resume_Rafi.S.B.M.pdf');
+export const PROFILE_PATH = getAsset('/Profile_Rafi.S.B.M.png');
 
 export interface FeaturedSystem {
   index: string;
@@ -364,7 +368,13 @@ export const kalProjects: KalProjectItem[] = [
     github: 'https://github.com/sbmrafi-kal/tts-blogs',
     linkText: 'Inspect GitHub Repository',
     isFlagship: true,
-    images: ['/tts-blogs/1.png', '/tts-blogs/2.png', '/tts-blogs/3.png', '/tts-blogs/4.png', '/tts-blogs/5.png']
+    images: [
+      getAsset('/tts-blogs/1.png'),
+      getAsset('/tts-blogs/2.png'),
+      getAsset('/tts-blogs/3.png'),
+      getAsset('/tts-blogs/4.png'),
+      getAsset('/tts-blogs/5.png')
+    ]
   },
   {
     id: 'neeli-editorial',
@@ -730,14 +740,14 @@ export const hackathons: HackathonItem[] = [
       { label: 'Platform', val: 'Google Cloud' }
     ],
     images: [
-      '/Hackathon Pics/Agentic AI Post/1.jpg',
-      '/Hackathon Pics/Agentic AI Post/2.jpg',
-      '/Hackathon Pics/Agentic AI Post/3.jpg',
-      '/Hackathon Pics/Agentic AI Post/4.jpg',
-      '/Hackathon Pics/Agentic AI Post/5.jpg',
-      '/Hackathon Pics/Agentic AI Post/6.png',
-      '/Hackathon Pics/Agentic AI Post/7.jpg',
-      '/Hackathon Pics/Agentic AI Post/8.jpg'
+      getAsset('/Hackathon Pics/Agentic AI Post/1.jpg'),
+      getAsset('/Hackathon Pics/Agentic AI Post/2.jpg'),
+      getAsset('/Hackathon Pics/Agentic AI Post/3.jpg'),
+      getAsset('/Hackathon Pics/Agentic AI Post/4.jpg'),
+      getAsset('/Hackathon Pics/Agentic AI Post/5.jpg'),
+      getAsset('/Hackathon Pics/Agentic AI Post/6.png'),
+      getAsset('/Hackathon Pics/Agentic AI Post/7.jpg'),
+      getAsset('/Hackathon Pics/Agentic AI Post/8.jpg')
     ]
   },
   {
@@ -756,12 +766,12 @@ export const hackathons: HackathonItem[] = [
       { label: 'Domain', val: 'Space Biology' }
     ],
     images: [
-      '/Hackathon Pics/NASA Space Apps Challenge 2025/1.jpeg',
-      '/Hackathon Pics/NASA Space Apps Challenge 2025/2.jpeg',
-      '/Hackathon Pics/NASA Space Apps Challenge 2025/3.jpeg',
-      '/Hackathon Pics/NASA Space Apps Challenge 2025/4.jpeg',
-      '/Hackathon Pics/NASA Space Apps Challenge 2025/5.jpeg',
-      '/Hackathon Pics/NASA Space Apps Challenge 2025/6.jpeg'
+      getAsset('/Hackathon Pics/NASA Space Apps Challenge 2025/1.jpeg'),
+      getAsset('/Hackathon Pics/NASA Space Apps Challenge 2025/2.jpeg'),
+      getAsset('/Hackathon Pics/NASA Space Apps Challenge 2025/3.jpeg'),
+      getAsset('/Hackathon Pics/NASA Space Apps Challenge 2025/4.jpeg'),
+      getAsset('/Hackathon Pics/NASA Space Apps Challenge 2025/5.jpeg'),
+      getAsset('/Hackathon Pics/NASA Space Apps Challenge 2025/6.jpeg')
     ]
   },
   {
@@ -780,11 +790,11 @@ export const hackathons: HackathonItem[] = [
       { label: 'Role', val: 'Lead Presenter' }
     ],
     images: [
-      '/Hackathon Pics/Anveeshana/0.jpg',
-      '/Hackathon Pics/Anveeshana/1.jpg',
-      '/Hackathon Pics/Anveeshana/2.jpg',
-      '/Hackathon Pics/Anveeshana/4.jpg',
-      '/Hackathon Pics/Anveeshana/5.jpg'
+      getAsset('/Hackathon Pics/Anveeshana/0.jpg'),
+      getAsset('/Hackathon Pics/Anveeshana/1.jpg'),
+      getAsset('/Hackathon Pics/Anveeshana/2.jpg'),
+      getAsset('/Hackathon Pics/Anveeshana/4.jpg'),
+      getAsset('/Hackathon Pics/Anveeshana/5.jpg')
     ]
   },
   {
@@ -803,10 +813,10 @@ export const hackathons: HackathonItem[] = [
       { label: 'Outcome', val: 'Functional Prototype' }
     ],
     images: [
-      '/Hackathon Pics/Design Venture/1.JPG',
-      '/Hackathon Pics/Design Venture/2.JPG',
-      '/Hackathon Pics/Design Venture/3.jpg',
-      '/Hackathon Pics/Design Venture/4.jpg'
+      getAsset('/Hackathon Pics/Design Venture/1.JPG'),
+      getAsset('/Hackathon Pics/Design Venture/2.JPG'),
+      getAsset('/Hackathon Pics/Design Venture/3.jpg'),
+      getAsset('/Hackathon Pics/Design Venture/4.jpg')
     ]
   }
 ];

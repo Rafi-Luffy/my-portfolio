@@ -95,11 +95,11 @@ export default function Portfolio() {
       if (document.hidden) {
         document.title = 'Bounty Rising... 👀';
       } else {
-        document.title = 'Rafi.S.B.M | Code Navigator';
+        document.title = 'Rafi.S.B.M - AI Engineer & Full-Stack Systems Architect';
       }
     };
 
-    document.title = 'Rafi.S.B.M | Code Navigator';
+    document.title = 'Rafi.S.B.M - AI Engineer & Full-Stack Systems Architect';
 
     document.addEventListener('visibilitychange', handleVisibilityChange);
 

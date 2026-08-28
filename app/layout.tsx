@@ -15,12 +15,15 @@ const mono = Space_Mono({
   display: 'swap'
 });
 
+const isProd = process.env.NODE_ENV === 'production';
+const basePath = isProd ? '/my-portfolio' : '';
+
 export const metadata: Metadata = {
-  title: 'S.B.M. Rafi - AI Engineer & Full-Stack Systems Architect | Editions ’26',
+  title: 'Rafi.S.B.M - AI Engineer & Full-Stack Systems Architect | Editions ’26',
   description:
-    'Portfolio of Shaik Balaji Mahammad Rafi (S.B.M. Rafi). AI Engineer, Google Agentic AI Grand Finalist, and Full-Stack Systems Architect building production-ready multi-agent workflows, GraphRAG memory archives, and high-throughput streaming intelligence.',
+    'Portfolio of Shaik Balaji Mahammad Rafi (Rafi.S.B.M). AI Engineer, Google Agentic AI Grand Finalist, and Full-Stack Systems Architect building production-ready multi-agent workflows, GraphRAG memory archives, and high-throughput streaming intelligence.',
   keywords: [
-    'S.B.M. Rafi',
+    'Rafi.S.B.M',
     'Shaik Balaji Mahammad Rafi',
     'AI Engineer',
     'Agentic AI',
@@ -38,14 +41,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://rafi-luffy.github.io/my-portfolio/',
-    title: 'S.B.M. Rafi - AI Engineer & Full-Stack Systems Architect',
+    title: 'Rafi.S.B.M - AI Engineer & Full-Stack Systems Architect',
     description:
       'AI Engineer, Google Agentic AI Grand Finalist, and Full-Stack Systems Architect building production-ready intelligence systems that work everywhere.',
     siteName: 'Rafi Editions ’26'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'S.B.M. Rafi - AI Engineer & Full-Stack Systems Architect',
+    title: 'Rafi.S.B.M - AI Engineer & Full-Stack Systems Architect',
     description: 'AI Engineer building production-ready intelligent systems that work everywhere.'
   },
   robots: {
@@ -53,9 +56,9 @@ export const metadata: Metadata = {
     follow: true
   },
   icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg'
+    icon: `${basePath}/favicon.svg`,
+    shortcut: `${basePath}/favicon.svg`,
+    apple: `${basePath}/favicon.svg`
   }
 };
 
