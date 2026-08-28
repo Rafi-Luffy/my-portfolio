@@ -1,55 +1,28 @@
-# Portfolio - Rafi.S.B.M
+# 🏴‍☠️ Set Sail for the All Blue of Code // S.B.M. Rafi Editions ’26
 
-Live Portfolio: https://rafi-luffy.github.io/my-portfolio/
+> *"Inherited Will, The Flow of Time, and The Dreams of Its People... As long as people continue to pursue the meaning of Freedom, these things will never cease to be!"* — **Gol D. Roger**
 
-## About
+**Live Website**: [https://rafi-luffy.github.io/my-portfolio/](https://rafi-luffy.github.io/my-portfolio/)
 
-Personal portfolio website showcasing projects, skills, and professional experience in full-stack development and AI/ML engineering.
+---
 
-## Tech Stack
+Welcome to the digital logbook of Shaik Balaji Mahammad Rafi (Rafi-Luffy) - AI Engineer, Google Agentic AI Grand Finalist, and Systems Architect
+navigating across autonomous agent swarms, verifiable GraphRAG memory substrates, and high-throughput real-time intelligence.
 
-- React 19
-- TypeScript
-- Vite
-- TailwindCSS
-- Framer Motion
-- EmailJS
+### Connect With Me
 
-## Features
+- Live Portfolio: [https://rafi-luffy.github.io/my-portfolio/](https://rafi-luffy.github.io/my-portfolio/)
+- LinkedIn: [https://www.linkedin.com/in/rafi-s-b-m/](https://www.linkedin.com/in/rafi-s-b-m/)
+- GitHub: [https://github.com/Rafi-Luffy](https://github.com/Rafi-Luffy)
+- Email: [s.b.m.rafi01@gmail.com](mailto:s.b.m.rafi01@gmail.com)
 
-- Responsive design
-- Interactive project showcase
-- Hackathon image carousels
-- Contact form integration
-- Smooth animations
-
-## Development
+### Local Development
 
 ```bash
+git clone https://github.com/Rafi-Luffy/my-portfolio.git
+cd my-portfolio
 npm install
 npm run dev
 ```
 
-## Build
-
-```bash
-npm run build
-npm run preview
-```
-
-## Deployment
-
-Deployed on GitHub Pages using GitHub Actions workflow.
-
-## Contact
-
-- Email: s.b.m.rafi01@gmail.com
-- LinkedIn: [linkedin.com/in/rafi-s-b-m](url)
-- GitHub: [github.com/Rafi-Luffy](url)
-
-## License
-
-MIT License
----
-
-**Built with ❤️ by S.B.M. Rafi** | © 2025 • Where innovation meets execution
+© 2026 Shaik Balaji Mahammad Rafi. All Rights Reserved.
