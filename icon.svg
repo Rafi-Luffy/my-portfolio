@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e131f"/>
+      <stop offset="100%" stop-color="#05070a"/>
+    </linearGradient>
+
+    <!-- Glowing Border Gradient -->
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#c084fc" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Vibrant Monogram Gradient -->
+    <linearGradient id="rGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="35%" stop-color="#e0f2fe"/>
+      <stop offset="70%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Ambient Glow Filter -->
+    <radialGradient id="glowGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Deep Obsidian Tile with Crisp Glow Border -->
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="url(#bgGrad)"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14" fill="none" stroke="url(#borderGrad)" stroke-width="1.8"/>
+
+  <!-- Radial Core Glow -->
+  <circle cx="32" cy="30" r="22" fill="url(#glowGlow)"/>
+
+  <!-- Bold Modern Monogram 'R' - High-Contrast Precision Vector Geometry -->
+  <path d="M 18 13.5 
+           L 34.5 13.5 
+           C 42.5 13.5 47.5 17.5 47.5 24.5 
+           C 47.5 30.5 43.5 34.2 37.5 35.2 
+           L 48 50.5 
+           L 38.5 50.5 
+           L 29.5 36.5 
+           L 26 36.5 
+           L 26 50.5 
+           L 18 50.5 
+           Z 
+           M 26 20 
+           L 26 30.5 
+           L 34 30.5 
+           C 38.2 30.5 40.5 28.5 40.5 25.2 
+           C 40.5 22 38.2 20 34 20 
+           Z" 
+        fill="url(#rGrad)"/>
+
+  <!-- High-Precision Sparkle ✦ in Top-Right Corner -->
+  <path d="M 48 10 
+           C 48 13.5 50.5 16 54 16 
+           C 50.5 16 48 18.5 48 22 
+           C 48 18.5 45.5 16 42 16 
+           C 45.5 16 48 13.5 48 10 Z" 
+        fill="#38bdf8"/>
+  <circle cx="48" cy="16" r="1.2" fill="#ffffff"/>
+</svg>
