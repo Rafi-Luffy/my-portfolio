@@ -91,6 +91,19 @@ export default function Portfolio() {
   useEffect(() => {
     setAudioActive(sound.isEnabled());
 
+    if (window.location.hash) {
+      window.history.replaceState(null, '', window.location.pathname + window.location.search);
+    }
+
+    const cleanHash = () => {
+      if (window.location.hash) {
+        window.history.replaceState(null, '', window.location.pathname + window.location.search);
+      }
+    };
+
+    window.addEventListener('beforeunload', cleanHash);
+    window.addEventListener('pagehide', cleanHash);
+
     const handleVisibilityChange = () => {
       if (document.hidden) {
         document.title = 'Bounty Rising... 👀';
@@ -111,12 +124,17 @@ export default function Portfolio() {
       } else {
         setShowBackToTop(window.scrollY > 600);
       }
+      if (window.scrollY < 80 && window.location.hash) {
+        cleanHash();
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll();
 
     return () => {
+      window.removeEventListener('beforeunload', cleanHash);
+      window.removeEventListener('pagehide', cleanHash);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
       window.removeEventListener('scroll', handleScroll);
     };
@@ -552,25 +570,25 @@ export default function Portfolio() {
                 <b>01</b> Lifelong Mission
               </a>
               <a
-                href="#system-01"
+                href="#capabilities"
                 onClick={() => sound.click()}
                 onMouseEnter={() => sound.hover()}
               >
-                <b>02</b> Project Chimera (Agentic AI)
+                <b>02</b> Capabilities Radar
               </a>
               <a
-                href="#system-02"
+                href="#certifications"
                 onClick={() => sound.click()}
                 onMouseEnter={() => sound.hover()}
               >
-                <b>03</b> Know Your Parents (GraphRAG)
+                <b>03</b> Verified Credentials
               </a>
               <a
-                href="#system-03"
+                href="#journey"
                 onClick={() => sound.click()}
                 onMouseEnter={() => sound.hover()}
               >
-                <b>04</b> AI Poll Platform (Real-Time)
+                <b>04</b> Work Experience
               </a>
               <a
                 href="#hackathons"
